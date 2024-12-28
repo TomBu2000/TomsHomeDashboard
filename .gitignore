@@ -399,4 +399,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-./app/config.json
+./toms-home-dashboard/app/config.json
