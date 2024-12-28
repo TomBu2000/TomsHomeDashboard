@@ -94,3 +94,7 @@ export type News = {
 export type TagesschauNews = {
   news: News[]
 }
+
+export type Config = {
+  OpenWeatherMapsAppId: string
+}
