@@ -10,7 +10,8 @@ export function CurrentNews() {
     async () => {
       return await getCurrentNews()
     },
-    { refetchInterval: 1000 * 120 }
+    //Update every 15 minutes and force to not update for 14 minutes
+    { refetchInterval: 1000 * 60 * 15, staleTime: 1000 * 60 * 14 }
   )
 
   const renderCurrentWeatherInfo = useMemo(() => {
