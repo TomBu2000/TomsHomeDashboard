@@ -9,7 +9,7 @@ export function CurrentWeather() {
     async () => {
       return await getCurrentWeather()
     },
-    { refetchInterval: 1000 * 60 }
+    { refetchInterval: 1000 * 60, staleTime: 1000 * 50 }
   )
 
   const renderCurrentWeatherInfo = useMemo(() => {
