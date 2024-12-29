@@ -1,9 +1,11 @@
-import fs from "fs"
 import { Config } from "../models"
+import { Request } from "./Request"
 
-export function getConfig(): Config {
-  const jsonString = fs.readFileSync("../config.json", "utf-8")
-  const data: Config = JSON.parse(jsonString)
+export async function getConfig() {
+  const response = await Request<Config>(
+    "http://192.168.178.60:3030/api/config/getConfig",
+    true
+  )
 
-  return data
+  return response
 }
